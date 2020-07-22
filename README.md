@@ -1,8 +1,8 @@
 # Projects-with-python
 
-#Hola, estoy aprendiendo python
+# Hola, estoy aprendiendo python
 
-##¿Cual es el proposito?
+## ¿Cual es el proposito?
 
 *aprender mas sobre el lenguaje python
 
