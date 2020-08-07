@@ -1,0 +1,88 @@
+Expresiones regulares con Python
+creditos : pildorasinformaticas en youtube y www.pildorasinformaticas.es sitio web oficial.
+Forma de uso :
+ import re : libreria necesaria
+ re.Expresion_regular(patron,donde_se_busca)
+ 
+ ejemplo : re.seach("Ana",lista_nombres)
+
+----------------------------------------
+Lista : 
+
+search : busca en la cadena si esa palabra se encuentra.
+
+march : busca al inicio de la cadena.
+
+findall : busca todas las coincidencias.
+
+finditer : convierte las coincidencias en iteradores.
+
+
+----------------------------------------
+
+Expresiones auxiliares : 
+start : la posicion donde inicia.
+
+end : la posicion de donde termina.
+
+IGNORECASE : se usa para que busque independiente mayusculas y minusculas
+ejemplo : re.march("Hola",cadena,IGNORECASE) , ese "Hola" , ignora que sea mayuscula o minuscula
+
+'.' : supone un caracter cualquiera
+ejemplo explicativo : Sara y Lara, ambos poseen 'ara' , por lo cual, si se quieren conocer, es eficiente usar '.'.
+ejemplo codigo : re.search(".ara", cadena) , el caracter '.' supone cualquier caracter'.
+----------------------------------------
+
+Metacaracteres :
+ ^ : busca coincidencias al inicio
+ ejemplo : ^Henry, todo lo que inicie con Henry.
+  
+ $ : busca coincidencias al final 
+ ejemplo : Henry$ , todo lo que termine con Henry.
+ 
+ [caracteres] : verifica que los caracteres existan en la cadena.
+ ejemplo : cami[oó]n, verifica todas las palabras con y sin tilde de camión.
+ 
+ Rango de caracteres : verifica en un rango de caracteres, util para abecedarios y similar.
+ ejemplo : [A-T] , verifica que existan palabras comprendidas entre la letra 'A' y la 'T'.
+ 
+ Negacion en rango de caracteres : niega los caracteres.
+ ejemplo : [^A-T] , que no tengan las letras 'A' y 'T' , aunque '^' ya se repite, el modo de usarlo es diferente.
+ 
+ Combinacion de rango de caracteres : 
+ ejemplo : [A-T0-5] , busca de 'A' a 'T' , pero tambien de '0' a '5'
+ 
+ '*' : aplica para cero o mas coincidencias de un patron
+ ejemplo : ab* , coincidira con 'a' , 'ab' , 'abb' , 'abbb' , etc
+ 
+-----------------------------------------
+
+Clases predefinidas:
+
+\d : equivale a [0-9]
+
+\s : caracteres de espacio en blanco    
+    (space, tab , enter , etc)
+
+\w : cualquier letra minuscula , numeros y guion bajo.
+
+-----------------------------------------
+
+Cuantificadores
+
+? : patrones que aparezcan cero o una vez
+
++ : patrones que aparezcan una o mas veces
+
+* :  patrones;que aparezcan cero o mas veces.
+{numero_de_veces} : se coloca el numero de veces que quiere que aparezca el patron.
+{minimo,maximo} : la cantidad minima y maxima que puede aparecer un patron.
+
+-----------------------------------------
+
+Campos 
+
+() : Agrupar como deberia aparecer algo
+ejemplo : ab+ , da ocurrencias de 
+ab , abb, abbb , etc
+Al colocar (ab)+ da ocurrencias de ab, abab, ababab , etc
