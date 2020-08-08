@@ -27,11 +27,11 @@ capital_letter_password = False
 
 password_level = "vulnerable"
 
-quantity_simbols = (lambda p : len(re.findall("\W",p))) (password)
+quantity_simbols = len(re.findall("\W",password))
 
-quantity_alpha_num = (lambda p : len(re.findall("\w",p)))(password)
+quantity_alpha_num = len(re.findall("\w",password))
 
-quantity_capital_letter = (lambda p : len(re.findall("[A-Z]",p)))(password)
+quantity_capital_letter = len(re.findall("[A-Z]",password))
 
 if re.search("\s",password) is None : 
  if ilicit_pattern.search(password) is None : 
