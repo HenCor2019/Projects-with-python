@@ -17,6 +17,7 @@ findall : busca todas las coincidencias.
 
 finditer : convierte las coincidencias en iteradores.
 
+compile : un patron  predefinido
 
 ----------------------------------------
 
@@ -55,7 +56,7 @@ Metacaracteres :
  '*' : aplica para cero o mas coincidencias de un patron
  ejemplo : ab* , coincidira con 'a' , 'ab' , 'abb' , 'abbb' , etc
  
------------------------------------------
+------------------------------------------------------
 
 Clases predefinidas:
 
