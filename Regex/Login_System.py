@@ -9,7 +9,7 @@ def Options() :
     return  int(input("Elige una opcion : "))
 
 def Domain_Verify(user) :
-    if re.search(r"@gmail.",user) is not None and re.search(r"(@gmail.com)$",user) is not None :
+    if re.search(r"@gmail\.|gmail",user) is None and re.search(r"(@gmail\.com)$",user) is None :
         return True
 
     return False
@@ -21,20 +21,16 @@ def Verify(user,Mails) :
     return False
 
 def Register(Mails) :
-    gmail_pattern = "(\w\.?){6,29}(@gmail.com)?"
-    ilicit_words = "pene|vagina|pendejo|fuck|puto|puta"
-    illegal_characters = "[\s#-=!\|/[]{}<>+)(*&^%$`@~';,]"
-
     tmp_user = input("usuario : ")
     tmp_password = input("contrase?a : ")
 
-    if re.search(r"(\w\.?){6,29}@?",tmp_user) is not None and Domain_Verify(tmp_user) :
+    if re.search(r"\w{6,29}@?",tmp_user) is not None and Domain_Verify(tmp_user) :
 
         if re.search(r"pene|vagina|pendejo|fuck|puto|puta",tmp_user) is not None or re.search(r"[\#\-\=\^\$\%\!]",tmp_user) :
            return "", ""
 
         if re.search(r"(@gmail.com)$",tmp_user) is None :
-           return tmp_user+"@gmail.com", tmp_password
+           tmp_user+="@gmail.com"
      
         if Verify(tmp_user,Mails) : return "",""
     
