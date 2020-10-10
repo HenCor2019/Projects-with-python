@@ -7,3 +7,5 @@
 *aprender mas sobre el lenguaje python
 
 *aprender sobre las diferentes librerias que ofrece para el calculo
+
+*Aprender scipy
