@@ -8,9 +8,19 @@ request = r'^([189])(\d{7})([A-Za-z]{0})'
 
 pattern = re.compile(request)
 
-prueba = '123456789'
+test = '123456789'
+test2 = '000000031'
+test3 =  '12345678'
 
-if pattern.search(prueba) is not None and len(prueba) == 8 :
+if pattern.search(test) is not None and len(test) == 8 :
+    print('Valid')
+else :
+    print('Invalid')
+if pattern.search(test2) is not None and len(test2) == 8 :
+    print('Valid')
+else :
+    print('Invalid')
+if pattern.search(test3) is not None and len(test3) == 8 :
     print('Valid')
 else :
     print('Invalid')
