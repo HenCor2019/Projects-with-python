@@ -25,5 +25,6 @@ def Function_5i5i(x,a) :
     return a.prod()
 
 print(" una funcion")
+print(" una funcion")
 print(Function_5i(100,array5I)/Function_5i5i(100,array5I))
 
