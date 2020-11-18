@@ -1,7 +1,6 @@
 import abc
 from abc import ABCMeta
 
-
 class Weapon(object):
     durability = 0
     name = ""
@@ -65,6 +64,6 @@ sword = Sword("espada",100,"una mano")
 sword.name = "chunchumaru"
 print(sword.name)
 
-bow = Bow("Arco",100,"larga distancia")
-bow.name = "Arco santo"
-print(bow.name)
+Bow = Bow("Arco",100,"larga distancia")
+Bow.name = "Arco santo"
+print(Bow.name)
